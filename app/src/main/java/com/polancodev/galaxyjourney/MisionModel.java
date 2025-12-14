@@ -23,6 +23,12 @@ public class MisionModel implements Parcelable {
     @SerializedName("wiki_url")
     String wiki;
 
+    @SerializedName("descripcion")
+    String descripcion;
+
+    @SerializedName("id")
+    int id;
+
     public MisionModel(String nombreMision, String agencia, String imagenMision) {
         this.nombreMision = nombreMision;
         this.agencia = agencia;
@@ -35,6 +41,8 @@ public class MisionModel implements Parcelable {
         imagenMision = in.readString();
         urlImagen = in.readString();
         wiki = in.readString();
+        descripcion = in.readString();
+        id = in.readInt();
     }
 
     public static final Creator<MisionModel> CREATOR = new Creator<MisionModel>() {
@@ -48,6 +56,14 @@ public class MisionModel implements Parcelable {
             return new MisionModel[size];
         }
     };
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
 
     public String getNombreMision() {
         return nombreMision;
@@ -94,6 +110,14 @@ public class MisionModel implements Parcelable {
         return 0;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public void writeToParcel(@NonNull Parcel parcel, int i) {
         parcel.writeString(nombreMision);
@@ -101,5 +125,7 @@ public class MisionModel implements Parcelable {
         parcel.writeString(imagenMision);
         parcel.writeString(urlImagen);
         parcel.writeString(wiki);
+        parcel.writeString(descripcion);
+        parcel.writeInt(id);
     }
 }

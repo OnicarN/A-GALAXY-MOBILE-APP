@@ -6,24 +6,38 @@
     android:background="@drawable/background"
     android:padding="16dp">
 
+
     <ImageView
         android:id="@+id/imagenFichaMision"
         android:layout_width="0dp"
         android:layout_height="250dp"
-        android:layout_marginTop="228dp"
+        android:layout_marginTop="144dp"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+
         tools:src="@tools:sample/avatars" />
+
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="holaa"
+        app:layout_constraintTop_toBottomOf="@id/imagenFichaMision"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="29dp" />
 
     <Button
         android:id="@+id/webOficial"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="32dp"
         android:backgroundTint="@color/purple"
         android:text="Ver web oficial"
         app:layout_constraintEnd_toStartOf="@id/invitarAmigo"
@@ -35,7 +49,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="96dp"
         android:backgroundTint="@color/purple"
         android:text="Invitar a amigo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +63,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/dark_gray"
-        android:text="Notificarme"
+        android:text="Suscribirse con alertas"
         app:layout_constraintEnd_toStartOf="@id/ObtenerParche"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/webOficial" />
@@ -59,7 +73,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="@color/dark_gray"
         android:text="Obtener Parche"
         app:layout_constraintEnd_toEndOf="parent"
